@@ -1,23 +1,37 @@
+var vows = ["a", "e", "i", "o", "u"]
+
 function toPig(sentence){
-  breakSentence(sentence);
-  checkVow(toWords);
+
+  toWords = sentence.toLowerCase().split(" ");
+  console.log(toWords);
+  for(i=0; i < toWords.length; i++){
+      toWords[i]= toWords[i].split("");
+  }
+    
   console.log(toWords);
 }
-
-
-function breakSentence(string){
-
-  toWords = string.toLowerCase().split(" ");
-}
-function checkVow(words){
-  for (i=0; i<words.length; i++){
-    if(words[i].charAt(0) === "a" ||words[i].charAt(0) === "e" ||words[i].charAt(0) === "i" ||words[i].charAt(0)=== "o" ||words[i].charAt(0) === "u"){
-      words[i] = words[i]+"way";
-    }
-  }
-}
-
-
+// function toPig(sentence){
+//   toWords = sentence.toLowerCase().split(" ");
+//
+//   for(i=0; i<toWords.length; i++){
+//     if(checkVow(toWords[i])){
+//       toWords[i] = toWords[i] + "way";
+//     }
+//   }
+//   alert(vows.length)
+//   alert(toWords);
+// }
+//
+// function checkVow(word){
+//   for(i=0; i<vows.length; i++){
+//       if (vows[i] === word.charAt(0)){
+//         return true;
+//       }else{
+//         return false;
+//       }
+//     }
+//
+//   }
 
 
 
